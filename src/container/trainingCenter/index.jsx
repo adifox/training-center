@@ -10,9 +10,9 @@ import VideoPlayer from '../../components/videoPlayer';
 import * as actions from '../../store/actions/videoAction';
 
 // Styles
-import styles from './ccTrainingCenter.module.css';
+import styles from './trainingCenter.module.css';
 
-class CcTrainingCenter extends Component {
+class TrainingCenter extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -135,4 +135,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CcTrainingCenter);
+export default connect(mapStateToProps, mapDispatchToProps)(TrainingCenter);

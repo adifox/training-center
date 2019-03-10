@@ -2,14 +2,14 @@ import React, { Component, Fragment } from 'react';
 
 // Components
 import Header from './components/header';
-import CcTrainingCenter from './container/ccTrainingCenter';
+import TrainingCenter from './container/trainingCenter';
 
 class App extends Component {
   render() {
     return (
       <Fragment>
         <Header />
-        <CcTrainingCenter />
+        <TrainingCenter />
       </Fragment>
     );
   }
