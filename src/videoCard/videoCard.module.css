@@ -1,0 +1,17 @@
+.card{
+  max-width: 350px;
+  margin-bottom: 20px;
+}
+.cardBody{
+  max-height: 250px;
+}
+.cardButton{
+  margin-top: 10px;
+  margin-right: 2px;
+}
+.cardText{
+  max-height: 100px;
+}
+.cardImage{
+  max-height: 170px;
+}

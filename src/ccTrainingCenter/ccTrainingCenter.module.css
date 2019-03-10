@@ -1,0 +1,11 @@
+.contentWrapper{
+  background-color: #252525;
+}
+.mainTitle{
+  color: white;
+  padding: 20px 0;
+}
+.jumbotronWrapper{
+  display: flex;
+  justify-content: space-between;
+}

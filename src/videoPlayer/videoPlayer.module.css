@@ -1,0 +1,10 @@
+.videoFrame{
+  width: 640px;
+  height: 480px;
+}
+.videoWrapper{
+  width: 640px;
+  min-height: 200px;
+  padding: 0;
+  margin-right: 40px;
+}
