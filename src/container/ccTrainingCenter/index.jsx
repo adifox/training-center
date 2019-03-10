@@ -3,11 +3,11 @@ import { Container, Row, Col, Jumbotron, Badge, Media } from 'reactstrap';
 import { connect } from 'react-redux';
 
 // Components
-import VideoCard from '../videoCard';
-import VideoPlayer from '../videoPlayer';
+import VideoCard from '../../components/videoCard';
+import VideoPlayer from '../../components/videoPlayer';
 
 // Actions
-import * as actions from '../store/actions/videoAction';
+import * as actions from '../../store/actions/videoAction';
 
 // Styles
 import styles from './ccTrainingCenter.module.css';
@@ -81,6 +81,9 @@ class CcTrainingCenter extends Component {
   render() {
     const videoCards = this.props.videos ? this.createVideoCards(this.props.videos) : null
     const favouriteVideos = this.state.favouriteVideos ? this.createFavouriteVidsList(this.state.favouriteVideos) : null
+    const error = this.props.error ? (
+      <h2 className={ styles.errorText }>No Videos available at the moment, please try again later.</h2>
+    ) : null
 
     return (
       <div className={ styles.contentWrapper }>
@@ -95,7 +98,9 @@ class CcTrainingCenter extends Component {
               />
             </Col>
             <Col>
-              <Jumbotron>
+              <Jumbotron
+                className={ styles.myListWrapper }
+              >
                 <h4>My Video List</h4>
                 <h5>Training Videos available:
                   <Badge color="secondary">{ this.props.videos ? this.props.videos.length : 0 }</Badge>
@@ -106,6 +111,7 @@ class CcTrainingCenter extends Component {
                 { favouriteVideos }
               </Jumbotron>
             </Col>
+            { error }
           </Row>
           <Row>
             { videoCards }
@@ -118,7 +124,8 @@ class CcTrainingCenter extends Component {
 
 const mapStateToProps = state => {
   return {
-    videos: state.videos.items
+    videos: state.videos.items,
+    error: state.error
   };
 }
 

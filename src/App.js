@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react';
 
 // Components
-import Header from './header';
-import CcTrainingCenter from './ccTrainingCenter';
+import Header from './components/header';
+import CcTrainingCenter from './container/ccTrainingCenter';
 
 class App extends Component {
   render() {

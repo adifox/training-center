@@ -13,7 +13,10 @@ const videoReducer = (state = initialState, action) => {
     };
     case actionTypes.REQUEST_VIDEOS_ERROR:
       console.log('SOMETHING WENT WRONG [AT VIDEO REQUEST]:', action.error)
-      break;
+      return {
+        ...state,
+        error: action.error
+      }
     default:
       return state;
   }

@@ -9,3 +9,9 @@
   display: flex;
   justify-content: space-between;
 }
+.myListWrapper{
+  min-height: 250px;
+}
+.errorText{
+  color: white;
+}

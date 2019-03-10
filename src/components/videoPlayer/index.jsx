@@ -9,7 +9,7 @@ const VideoPlayer = ({video}) => {
   let content = null
 
   if (!video) {
-    content = <h3>Choose a Video and improve your skills</h3>;
+    content = <h3>Choose a Video and improve your skills with Tips from the best players</h3>;
   } else {
     const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
     content = (
@@ -24,7 +24,7 @@ const VideoPlayer = ({video}) => {
 
   return (
     <Jumbotron
-      className={ video ? styles.videoWrapper : null }
+      className={ video ? styles.videoWrapper : styles.emptyWrapper }
     >
       { content }
     </Jumbotron>

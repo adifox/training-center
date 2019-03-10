@@ -8,3 +8,6 @@
   padding: 0;
   margin-right: 40px;
 }
+.emptyWrapper{
+  min-height: 250px;
+}
